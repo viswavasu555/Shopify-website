@@ -1,0 +1,897 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            margin-right: 0px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+
+        }
+
+        html {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #navbar {
+            background-color: rgb(255, 255, 255);
+            height: 125px;
+            /* Adjust the height as needed */
+            width: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: top 0.3s ease-in-out;
+        }
+
+        /* CSS for the logo */
+        #logo {
+            display: block;
+            margin: 0 auto;
+            width: 85px;
+            height: 45px;
+            position: relative;
+            top: 25px;
+
+        }
+
+        /* CSS for the navigation division */
+        #nav {
+            height: 42px;
+            width: 70%;
+
+            margin: 0;
+            padding: 0;
+            max-height: none;
+            min-height: 0;
+            max-width: 100%;
+            min-width: 0;
+            position: relative;
+            top: 80px;
+            left: 160px;
+            font-family: 'Inter' sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        /* CSS for the class to hide the navbar */
+        .hide {
+            top: -50px;
+        }
+
+        /* CSS for the navigation links */
+        #nav a {
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            position: relative;
+
+        }
+
+        .profile {
+            width: 10%;
+            height: 10%;
+        }
+
+        .search {
+            position: relative;
+            right: 52%;
+            bottom: 100px;
+        }
+
+        .profile {
+            position: relative;
+            bottom: 90px;
+            left: 760px;
+
+        }
+
+        .cart {
+
+            position: relative;
+            bottom: 80px;
+            left: 700px;
+
+        }
+
+        .hyper {
+            position: relative;
+            left: 50px;
+        }
+
+        .slider {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            margin: 0px;
+        }
+
+        .slides {
+            display: flex;
+        }
+
+        .slide {
+            width: 100%;
+            transition: 2s;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        /* arrow button styles */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5%;
+            height: auto;
+            cursor: pointer;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+            border-radius: 50px;
+
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .arrow-left {
+            left: 0;
+        }
+
+        .arrow-right {
+            right: 0;
+        }
+
+        .row1 {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column1 {
+            flex: 25%;
+            padding: 25px;
+            position: relative;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Adjust image size */
+        .image1 {
+            width: 338px;
+            height: 465px;
+        }
+
+        .head1 {
+            height: 70px;
+            width: 868px;
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            line-height: 35px;
+            text-decoration: none solid rgb(0, 0, 0);
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+            position: relative;
+            left: 20px;
+            top: 70px;
+
+        }
+
+        #inputt1 {
+            height: 48.8px;
+            width: 340px;
+            border: ;
+            border-top: 0px solid rgb(0, 0, 0);
+            border-right: 0px solid rgb(0, 0, 0);
+            border-bottom: 0.8px solid rgb(0, 0, 0);
+            border-left: 0px solid rgb(0, 0, 0);
+            margin: 0px;
+            padding: 10px 10px 10px 20px;
+            max-height: none;
+            min-height: auto;
+            max-width: none;
+            min-width: auto;
+            color: black;
+
+
+        }
+
+        #inputt1::placeholder {
+            color: black;
+            font-size: 17px;
+            text-decoration: solid;
+            font-weight: 700;
+        }
+
+        .input1 {
+            position: relative;
+            left: 60%;
+            width: 300px;
+
+        }
+
+        .button1 {
+            background-color: white;
+            border: 0px;
+            position: relative;
+            left: 400px;
+            bottom: 40px;
+            width: 99px;
+            height: 60px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .row2 {
+            display: flex;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column2 {
+            flex: 33.33%;
+            padding: 20px;
+        }
+
+        .title2 {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 700;
+            position: relative;
+            top: 25px;
+
+        }
+
+        .row3 {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column3 {
+            flex: 25%;
+            padding: 15px;
+            position: relative;
+        }
+
+        .title3 {
+
+            font-family: Inter, sans-serif;
+            font-size: 30px;
+            font-style: italic;
+            font-variant: normal;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            line-height: 39px;
+            text-decoration: underline solid rgb(0, 0, 0);
+            text-align: center;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+
+
+        }
+
+        .heading3 {
+            color: black;
+            text-align: left;
+            font-weight: 600;
+            font-size: 21px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sub3 {
+            font-family: Inter, sans-serif;
+            font-size: 21px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            line-height: 37.8px;
+            text-decoration: none solid rgb(0, 0, 0);
+            text-align: start;
+            text-indent: 0px;
+            text-transform: none;
+            vertical-align: baseline;
+            white-space: normal;
+            word-spacing: 0px;
+            color: black;
+
+        }
+
+        /* Hover effect */
+        .hover-image3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            width: 100%;
+
+        }
+
+        .column3:hover .hover-image3 {
+            opacity: 1;
+
+        }
+
+        /* Adjust image size */
+        .image3 {
+            width: 100%;
+        }
+
+        .row4 {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column4 {
+            flex: 33.33%;
+            padding: 15px;
+        }
+
+        .title4 {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 700;
+            position: relative;
+            top: 10px;
+
+        }
+
+        .heading4 {
+            color: black;
+            text-align: left;
+            font-weight: 600;
+            font-size: 21px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .sub4 {
+            font-size: 15px;
+            position: relative;
+            bottom: 25px;
+            color: #858585;
+            text-align: left;
+            font-weight: 300;
+        }
+
+        .lower {
+
+            background-color: black;
+            position: relative;
+            top: 7.5%;
+            bottom: 20px;
+            width: 100%;
+            height: 450px;
+            display: flex;
+            min-height: auto;
+            min-width: auto;
+
+
+        }
+
+        .first {
+            color: white;
+            position: relative;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            line-height: 18.2px;
+            word-spacing: 0px;
+            width: 393px;
+            height: 408px;
+            padding: 20px 20px 20px 20px;
+            left: 200px;
+            text-align: left;
+            text-decoration: none solid rgb(255 255 255);
+            min-height: auto;
+            min-width: auto;
+            position: relative;
+            bottom: 20px;
+            right: 50px;
+
+        }
+
+        .second {
+            list-style-type: disc;
+            width: 363px;
+            height: 180px;
+            padding: 20px 20px 20px 20px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            line-height: 26px;
+            position: relative;
+            font-weight: 500;
+            left: 160px;
+            text-align: left;
+            min-height: auto;
+            min-width: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            min-height: auto;
+            min-width: auto;
+        }
+
+        .third {
+            /* background-color: rgb(54, 227, 86);*/
+            color: white;
+            font-size: 14px;
+            position: relative;
+            font-weight: 600;
+            width: 363px;
+            height: 180px;
+            padding: 20px 20px 20px 20px;
+            line-height: 26px;
+            text-decoration: none;
+            left: 40px;
+            text-align: left;
+            min-height: auto;
+            min-width: auto;
+        }
+
+        .fourth {
+            /* background-color: rgb(24, 194, 251);*/
+            color: white;
+            font-size: 13px;
+            width: 363px;
+            height: 384px;
+            padding: 20px 20px 20px 20px;
+            position: relative;
+            font-weight: 600;
+            right: 200px;
+            min-height: auto;
+            min-width: auto;
+
+        }
+
+        .input5 {
+            padding: 10px 10px 10px 10px;
+            margin: 0 10px 0 0;
+            background-color: rgb(0, 0, 0);
+            margin: 8px 0 solid white;
+            height: 34px;
+            width: 250px;
+            border: 2px solid white;
+            text-align: center;
+            min-height: auto;
+            min-width: auto;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        li::marker {
+            color: RGB(28, 28, 28);
+
+        }
+
+        .subscribe {
+            height: 36px;
+            width: 108px;
+            padding: 10px 10px 10px 10px;
+            min-height: auto;
+            min-width: auto;
+            position: relative;
+            left: 260px;
+            bottom: 35px;
+        }
+
+        .social-media {
+            height: 35px;
+            width: 398px;
+            float: left;
+            padding: 15px;
+        }
+
+        .footer {
+            position: relative;
+            width: 1150px;
+            height: 32px;
+            color: white;
+            font-family: ;
+        }
+
+        .input-mail {
+            position: relative;
+            right: 40px;
+        }
+
+        .white {
+            width: 100%;
+            height: 125px;
+            background-color: cornsilk;
+            position: relative;
+        }
+
+        .black {
+            background-color: black;
+            width: 100%;
+            height: 40px;
+            margin-top: 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            font-size: 14px;
+
+        }
+
+        .topic {
+            position: relative;
+            top: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            line-height: 26px;
+        }
+
+        .profile:hover {
+            transform: scale(1.5);
+        }
+
+        .cart:hover {
+            transform: scale(1.5);
+        }
+
+        .search:hover {
+            transform: scale(1.5);
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        alert("This website is only for my own project purpose, No Sales will be done from this.If you have any queries please messeage to Vajjulavasu@gmail.com");
+    </script>
+    <div class="black">
+        <P class="topic">THIS WEBSITE IS JUST PROTOTYPED FOR EDUCATIONAL PURPOSE</P>
+    </div>
+    <div class="white">
+        <div id="navbar">
+            <img id="logo" src="images/logo.png" alt="Your Logo">
+        </div>
+        <div id="nav">
+            <div class="hyper"><a href="#">NEW IN</a>
+                <a href="#">JEANS</a>
+                <a href="#">JACKETS</a>
+                <a href="#">T-SHIRTS</a>
+                <a href="#">POLO T-SHIRTS</a>
+                <a href="#">SHIRTS</a>
+                <a href="#">SOCKS</a>
+                <a href="#">UNTTLDLIFE*</a>
+            </div>
+            <a class="profile" href=""><img src="images/profile.jpg" width="20px" height="20px"> </a>
+            <a class="search" href=""><img src="images/search.png" width="20px" height="20px"></a>
+            <a class="cart" href=""><img src="images/cart.jpg" width="40px" height="38px"></a>
+        </div>
+    </div>
+    <!-- image slider start -->
+    <div class="slider">
+        <div class="slides">
+            <!-- slide images start -->
+            <div class="slide">
+                <img src="images/8.jpg">
+            </div>
+            <div class="slide">
+                <img src="images/9.jpg">
+            </div>
+            <!-- slide images end -->
+        </div>
+        <!-- arrow buttons start -->
+        <button class="arrow arrow-left">&#8249;</button>
+        <button class="arrow arrow-right">&#8250;</button>
+        <!-- arrow buttons end -->
+    </div>
+    <!-- image slider end -->
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const arrowLeft = document.querySelector(".arrow-left");
+        const arrowRight = document.querySelector(".arrow-right");
+        let currentSlide = 0;
+
+        function reset() {
+            slides.forEach((slide) => {
+                slide.style.display = "none";
+            });
+        }
+
+        function startSlide() {
+            reset();
+            slides[0].style.display = "block";
+        }
+
+        function slideLeft() {
+            reset();
+            slides[currentSlide - 1].style.display = "block";
+            currentSlide--;
+        }
+
+        function slideRight() {
+            reset();
+            slides[currentSlide + 1].style.display = "block";
+            currentSlide++;
+        }
+
+        arrowLeft.addEventListener("click", function () {
+            if (currentSlide === 0) {
+                currentSlide = slides.length;
+            }
+            slideLeft();
+        });
+
+        arrowRight.addEventListener("click", function () {
+            if (currentSlide === slides.length - 1) {
+                currentSlide = -1;
+            }
+            slideRight();
+        });
+
+        startSlide();
+    </script>
+    <div class="head1">
+        <font>JOIN UNTTLD UNIVERSE NOW TO GET 15% OFF FOR A LIFETIME*</font>
+    </div>
+    <div class="input1">
+        <input id="inputt1" type="text" placeholder="EMAIL"><button class="button1">SIGN UP</button>
+    </div>
+    <div class="row1">
+        <div class="column1">
+            <a href="#">
+                <img class="image1" src="images/21.jpg" alt="Snow">
+            </a>
+        </div>
+
+        <div class="column1">
+            <a href="#">
+                <img class="image1" src="images/22.jpg" alt="Forest">
+            </a>
+        </div>
+
+        <div class="column1">
+            <a href="#">
+                <img class="image1" src="images/23.jpg" alt="Mountains">
+            </a>
+        </div>
+
+        <div class="column1">
+            <a href="#">
+                <img class="image1" src="images/24.jpg" alt="Mountains">
+            </a>
+        </div>
+    </div>
+    <div class="row2">
+        <a href="">
+            <div class="column2">
+                <img src="images/1.jpg" style="width:100%">
+        </a>
+
+    </div>
+    <a href="">
+        <div class="column2">
+            <img src="images/2.jpg" style="width:100%">
+    </a>
+    </div>
+    <a href="">
+        <div class="column2">
+            <img src="images/3.jpg" style="width:100%">
+    </a>
+    </div>
+    </div>
+    <h3 class="title3">NEW COLLECTION</h3>
+    <div class="row3">
+        <div class="column3">
+            <a href="#">
+                <img class="image3" src="images/31.jpg">
+                <img class="hover-image3" src="images/32.jpg">
+                <h2 class="heading3">Gable Black Geans</h2>
+                <div class="sub3">
+                    <font>RS. 2,950.00</font>
+                </div>
+            </a>
+        </div>
+
+        <div class="column3">
+            <a href="#">
+                <img class="image3" src="images/41.jpg" alt="Forest">
+                <img class="hover-image3" src="images/42.jpg" alt="Forest Hover">
+                <h2 class="heading3">Dylan Olive Jeans</h2>
+                <div class="sub3">
+                    <font>Rs. 2,950.00</font>
+                </div>
+            </a>
+        </div>
+
+        <div class="column3">
+            <a href="#">
+                <img class="image3" src="images/51.jpg" alt="Mountains">
+                <img class="hover-image3" src="images/52.jpg" alt="Mountains Hover">
+                <h2 class="heading3">Elvis Black Denim Jacket</h2>
+                <div class="sub3">
+                    <font>Rs. 3,250.00</font>
+                </div>
+            </a>
+        </div>
+
+        <div class="column3">
+            <a href="#">
+                <img class="image3" src="images/61.jpg" alt="Mountains">
+                <img class="hover-image3" src="images/62.jpg" alt="Mountains Hover">
+                <h2 class="heading3">Micheal Indigo Jeans</h2>
+                <div class="sub3">
+                    <font>Rs. 2,950.00</font>
+                </div>
+            </a>
+        </div>
+    </div>
+    <h3 class="title4">#UNTTLDLIFE*</h3>
+    <div class="row4">
+        <a href="">
+            <div class="column4">
+                <img src="images/5.png" style="width:100%">
+
+                <h2 class="heading4">THE ART OF WASHING JEANS</h2><br>
+                <div class="sub4">
+                    <font>By Unttld Jeans</font>
+                </div>
+        </a>
+
+    </div>
+    <a href="">
+        <div class="column4">
+            <img src="images/6.png" style="width:100%">
+            <h2 class="heading4">360° JEANSWEAR BY UNTTLD</h2>
+            <br>
+            <div class="sub4">
+                <font>Move from day to night, effortlessly</font>
+            </div>
+    </a>
+    </div>
+    <a href="">
+        <div class="column4">
+            <img src="images/7.png" style="width:100%">
+            <h2 class="heading4">RESPONSIBLE DENIM BY UNTTLD</h2>
+            <br>
+            <div class="sub4">
+                <font> Let's do it, together.</font>
+            </div>
+    </a>
+    </div>
+
+    </div>
+    <img class="hope" src="images/hope.jpg" width="100%" height="75%">
+    <div class="lower">
+        <div class=" first">
+            <h3> JOIN UNTTLD UNIVERSE NOW TO GET 10%
+                OFF FOR A LIFETIME*</h3> <br>
+            <div class="input-mail"> <input class="input5" type="email" placeholder="E-mail">
+                <button class="subscribe"> Subscribe</button>
+            </div>
+            <div class="social-media">
+                <a href=""><img src="images/instagram.jpg" width="10%" height="30px"></a>
+                <a href=""><img src="images/facebook.jpg" width="10%" height="30px"></a>
+                <a href=""><img src="images/twitter.jpg" width="10%" height="30px"></a>
+                <a href=""><img src="images/linkedin.jpg" width="10%" height="30px"></a>
+                <a href=""><img src="images/pinterest.jpg" width="10%" height="30px"></a>
+            </div>
+
+            </h3>
+        </div>
+        <div class="second">
+            <a href="">
+                <ul>
+
+                    <a href="" title="CONTACT US">
+                        <li> CONTACT US </li>
+                    </a>
+                    <a href="" title="SIZE CHARTS">
+                        <li>SIZE CHARTS</li>
+                    </a>
+                    <a href="" title="TRACK MY ORDER">
+                        <li>TRACK MY ORDER</li>
+                    </a>
+                    <a href="" title="DELIVERY & RETURNS">
+                        <li>DELIVERY & RETURNS</li>
+                    </a>
+                    <a href="" title="PRIVACY POLICY">
+                        <li>PRIVACY POLICY</li>
+                    </a>
+                    <a href="" title="TERMS & CONDITIONS">
+                        <li>TERMS & CONDITIONS</li>
+                    </a>
+
+                </ul>
+            </a>
+        </div>
+        <div class="third">
+            <a href="">
+                <ul>
+                    <li>NEW IN </li>
+                    <li> JEANS</li>
+                    <li>JACKETS</li>
+                    <li>T-SHIRTS</li>
+                    <li>POLO T-SHIRTS</li>
+                    <li> SHIRTS</li>
+                    <li>SOCKS</li>
+                    <li>UNTTLDLIFE*</li>
+
+                </ul>
+            </a>
+        </div>
+        <div class="fourth">
+            <pre style="font-family:'Inter'; font-size:14px; font-weight:600;min-height:auto;min-width:auto;">
+                    FOR FEEDBACK AND QUERIES PLEASE EMAIL 
+                    US AT CARE@UNTTLDJEANS.COM. OUR
+                    AMBITION IS TO ANSWER YOU WITHIN 24
+                    HOURS DURING BUSINESS DAYS.
+
+                    FOR SALES/WHOLESALE RELATED QUESTIONS
+                    WE KINDLY ASK YOU TO SEND US AN EMAIL 
+                    TO CARE@UNTTLDJEANS.COM WITH YOUR
+                    INQUIRY AND WE'LL FORWARD IT TO OUR 
+                    REPRESENTATIVES.
+
+                    HQ/WAREHOUSE ADDRESS
+                    878, 17TH MAIN, BTM 4TH
+                    BDA LAYOUT, BENGALURU
+                    PIN: 560076, INDIA
+                    PHONE: 91 63638 62653
+                </pre>
+        </div>
+    </div>
+</body>
+
+</html>
